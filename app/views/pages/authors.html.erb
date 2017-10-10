@@ -1,0 +1,10 @@
+<% @authors.each do |author| %>
+
+<div class="container">
+<div class="image"><%= author.image_url %></div>
+<div><%= author.name %></div>
+<div><%= author.books.name %></div>
+</div>
+<hr>
+
+<% end %>
