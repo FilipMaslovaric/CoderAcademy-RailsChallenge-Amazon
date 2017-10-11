@@ -13,4 +13,8 @@ class PagesController < ApplicationController
   def stores
     @stores = Store.all
   end
+
+  def show
+    @store = Store.find(params[:id])
+  end
 end

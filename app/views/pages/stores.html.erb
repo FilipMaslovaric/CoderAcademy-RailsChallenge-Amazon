@@ -1,10 +1,14 @@
 <% @stores.each do |store| %>
 
-<hr>
-<div class="container">
-<div><%= store.title %></div>
-<br>
-<div><%= store.full_address %></div>
-</div>
+  <hr>
+  <div class="container">
+    <div>
+      <%= link_to "#{store.title}", show_stores_path(store) %>
+    </div>
+    <br>
+    <div>
+      <%= store.full_address %>
+    </div>
+  </div>
 
 <% end %>
