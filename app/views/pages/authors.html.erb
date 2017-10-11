@@ -1,10 +1,12 @@
 <% @authors.each do |author| %>
 
-<div class="container">
-<div class="image"><%= author.image_url %></div>
-<div><%= author.name %></div>
-<div><%= author.books.name %></div>
-</div>
-<hr>
+    <div class="container">
+      <div class="image"><%= author.image_url %></div>
+      <div><%= author.name %></div>
+      <% author.books.each do |book| %>
+      <div><%= book.name %></div>
+      <% end %>
+    </div>
+    <hr>
 
 <% end %>
