@@ -8,7 +8,16 @@
       height="100%"
       frameborder="0" style="border:0"
       src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB_gYap3s8PA9Ai4ZXzBXPmh6ZCC2BplG0
-      &q=<%= @store.full_address %>" allowfullscreen>
-    </iframe>
+      &q=<%= @store.full_address%>" allowfullscreen>
+      </iframe>
+    <div>
+      <iframe
+      width="100%"
+      height="500"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyB_gYap3s8PA9Ai4ZXzBXPmh6ZCC2BplG0
+      &location=<%= @store.latitude %>,<%= @store.longitude %>" allowfullscreen>
+      </iframe>
+    </div>
     <br>
 </div>
