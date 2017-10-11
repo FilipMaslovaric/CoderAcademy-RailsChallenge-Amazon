@@ -9,4 +9,8 @@ class PagesController < ApplicationController
   def authors
     @authors = Author.all
   end
+
+  def stores
+    @stores = Store.all
+  end
 end
