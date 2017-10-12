@@ -1,5 +1,10 @@
 <% @stores.each do |store| %>
 
+<%= form_tag("/stores", method: "post") do %>
+<%= label_tag(:q, "Your Address:") %>
+<%= text_input_tag(:q) %>
+<%= submit_tag("Search Nearest Store")
+<% end %>
   <hr>
   <div class="container">
     <div>

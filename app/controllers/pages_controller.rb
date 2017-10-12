@@ -12,6 +12,9 @@ class PagesController < ApplicationController
 
   def stores
     @stores = Store.all
+    @stores = Store.near(params[:start], 8_000_000 , order: 'distance')
+
+
   end
 
   def show
