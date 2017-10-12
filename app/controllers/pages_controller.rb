@@ -11,10 +11,11 @@ class PagesController < ApplicationController
   end
 
   def stores
-    @stores = Store.all
-    @stores = Store.near(params[:start], 8_000_000 , order: 'distance')
-
-
+    if request.post?
+      @stores = Store.near(params[:store][:u_address], 8_000_000)
+    else
+      @stores = Store.all
+    end
   end
 
   def show

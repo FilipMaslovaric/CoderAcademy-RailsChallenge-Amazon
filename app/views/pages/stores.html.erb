@@ -1,10 +1,15 @@
+<%= simple_form_for :store, url: '/stores' do |f| %>
+  <div class="container my-4">
+    <div>
+    <%= f.label 'Enter your location for nearest store:' %>
+    <%= f.input :u_address, as: :string, label: ''%>
+    <%= f.button :submit,'Search' %>
+    </div>
+  </div>
+<% end %>
+
 <% @stores.each do |store| %>
 
-<%= form_tag("/stores", method: "post") do %>
-<%= label_tag(:q, "Your Address:") %>
-<%= text_input_tag(:q) %>
-<%= submit_tag("Search Nearest Store")
-<% end %>
   <hr>
   <div class="container">
     <div>
